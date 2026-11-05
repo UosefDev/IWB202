@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ar" lang="ar" dir="rtl">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="تقرير فكرة AI Feature — مساعد ذكي للتوصية بالسيارة المناسبة" />
+    <title>تقرير AI Feature — DriveEasy Car Rental</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <a href="home.html" class="navbar-brand">
+            <span class="brand-icon">🚗</span>
+            <span>
+                <span>DriveEasy</span>
+                <span class="brand-sub">Car Rental</span>
+            </span>
+        </a>
+        <ul class="navbar-nav">
+            <li><a href="home.html" id="nav-home"><span>الرئيسية</span></a></li>
+            <li><a href="AboutUs.html" id="nav-about"><span>من نحن</span></a></li>
+            <li><a href="Cars.html" id="nav-cars"><span>السيارات</span></a></li>
+            <li><a href="AIFeature.html" class="active" id="nav-ai"><span>AI Feature</span></a></li>
+        </ul>
+    </nav>
+
+    <div class="report-wrap" id="ai-report">
+
+        <!-- غلاف التقرير -->
+        <div class="report-cover" id="report-cover">
+            <span class="ai-badge">تقرير AI Feature</span>
+            <h1>مساعد اختيار السيارة الذكي</h1>
+            <p>Smart Car Recommendation Assistant</p>
+            <br />
+            <p style="font-size:0.85rem; color:rgba(255,255,255,0.65);">
+                إعداد: فريق DriveEasy — مادة تصميم وتطوير تطبيقات الوب — 2026
+            </p>
+        </div>
+
+        <!-- جدول ملخص الفكرة -->
+        <div class="report-section" id="feature-summary">
+            <h2><span>📋</span> ملخص الفكرة</h2>
+            <table class="info-table" summary="ملخص خصائص الميزة الذكية المقترحة">
+                <tbody>
+                    <tr>
+                        <th scope="row">اسم الـ Feature</th>
+                        <td>مساعد اختيار السيارة الذكي (Smart Car Advisor)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">الهدف</th>
+                        <td>مساعدة الزبون في اختيار السيارة الأنسب بناءً على احتياجاته وميزانيته</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">المستخدم المستهدف</th>
+                        <td>الزبون / الزائر للموقع</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">نوع التقنية المستخدمة</th>
+                        <td>معالجة اللغة الطبيعية (NLP) + نظام توصية قائم على المحتوى</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- الهدف من الفكرة -->
+        <div class="report-section" id="feature-goal">
+            <h2><span>🎯</span> الهدف من الفكرة</h2>
+            <p>
+                كثير من الزبائن يجدون صعوبة في اختيار السيارة المناسبة من بين قائمة كبيرة من الخيارات المتاحة،
+                خصوصاً عندما لا يكون لديهم خبرة تقنية كافية في مقارنة المواصفات.
+            </p>
+            <p style="margin-top:0.8rem;">
+                هذه الميزة تهدف إلى <strong>تبسيط عملية الاختيار</strong> من خلال طرح أسئلة بسيطة على الزبون
+                (عدد الأشخاص، الميزانية، نوع الاستخدام، مدة التأجير)، ثم تقديم توصية ذكية بالسيارة الأنسب له،
+                مع شرح سبب التوصية.
+            </p>
+        </div>
+
+        <!-- وصف طريقة عمل الـ Feature -->
+        <div class="report-section" id="feature-desc">
+            <h2><span>⚙️</span> وصف طريقة عمل الميزة</h2>
+
+            <div class="flow-step">
+                <div class="step-num">1</div>
+                <div class="step-content">
+                    <strong>الزبون يكتب طلبه بلغة طبيعية</strong>
+                    <p>
+                        مثلاً: "أحتاج سيارة لـ 4 أشخاص، لرحلة 5 أيام، ميزانيتي 1,200,000 ل.س"
+                        أو يجيب على أسئلة موجَّهة ضمن نموذج حوار بسيط (Chatbot).
+                    </p>
+                </div>
+            </div>
+
+            <div class="flow-step">
+                <div class="step-num">2</div>
+                <div class="step-content">
+                    <strong>تحليل الطلب بتقنية NLP</strong>
+                    <p>
+                        يُرسَل النص إلى نموذج لغوي (مثل OpenAI GPT API أو Gemini API)
+                        لاستخراج المعطيات الأساسية: عدد الركاب، الميزانية، نوع الاستخدام (مدينة/سفر).
+                    </p>
+                </div>
+            </div>
+
+            <div class="flow-step">
+                <div class="step-num">3</div>
+                <div class="step-content">
+                    <strong>مطابقة المعطيات مع قاعدة بيانات السيارات</strong>
+                    <p>
+                        يُقارن النظام المعطيات المستخرجة مع مواصفات وأسعار السيارات المتوفرة
+                        باستخدام خوارزمية تصفية وترتيب (Filtering + Scoring).
+                    </p>
+                </div>
+            </div>
+
+            <div class="flow-step">
+                <div class="step-num">4</div>
+                <div class="step-content">
+                    <strong>عرض التوصية</strong>
+                    <p>
+                        يُعرض على الزبون ترتيب أفضل 1-3 سيارات مناسبة، مع توضيح سبب التوصية،
+                        وزر مباشر لتحديد السيارة وبدء الحجز.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- خطوات التنفيذ -->
+        <div class="report-section" id="feature-steps">
+            <h2><span>🔧</span> خطوات التنفيذ</h2>
+            <ol>
+                <li>
+                    <strong>تصميم واجهة الحوار (Chat UI):</strong>
+                    إضافة زر "ساعدني في الاختيار" في صفحة السيارات يفتح نافذة Chatbot بسيطة.
+                </li>
+                <li>
+                    <strong>ربط الواجهة بـ API للذكاء الاصطناعي:</strong>
+                    استخدام Fetch API في جافاسكريبت لإرسال رسالة الزبون إلى
+                    OpenAI GPT-4o API أو Google Gemini API.
+                </li>
+                <li>
+                    <strong>System Prompt مُخصَّص:</strong>
+                    إرسال قائمة السيارات المتوفرة كـ context للنموذج اللغوي،
+                    مع تعليمات للرد باللغة العربية وتقديم توصية محددة.
+                </li>
+                <li>
+                    <strong>عرض النتيجة وربطها بالجدول:</strong>
+                    عند اقتراح سيارة معينة، يُضاف زر "اختر هذه السيارة" يُؤشّر خانة
+                    الاختيار مباشرةً في جدول السيارات.
+                </li>
+            </ol>
+        </div>
+
+        <!-- الملاحظات التقنية -->
+        <div class="report-section" id="feature-tech">
+            <h2><span>💡</span> ملاحظات تقنية</h2>
+            <p>التقنيات المستخدمة في التنفيذ:</p>
+            <div style="margin-top:0.8rem;">
+                <span class="tech-tag">OpenAI GPT-4o API</span>
+                <span class="tech-tag">🌐 Fetch API (JavaScript)</span>
+                <span class="tech-tag">📝 NLP — Natural Language Processing</span>
+                <span class="tech-tag">🔍 Content-Based Filtering</span>
+                <span class="tech-tag">💬 Chatbot UI</span>
+                <span class="tech-tag">🔒 API Key (Backend Proxy)</span>
+            </div>
+            <ul style="margin-top:1rem;">
+                <li>مفتاح الـ API يجب أن يُخزَّن في جانب الخادم (Backend) لحمايته من الكشف.</li>
+                <li>يمكن استخدام Netlify Functions أو Vercel Edge Functions كـ proxy بسيط.</li>
+                <li>في حال الرغبة بعمل الميزة بدون API خارجي، يمكن بناء نظام توصية بسيط
+                    بجافاسكريبت يعتمد على قواعد ثابتة (Rule-Based System).</li>
+                <li>يُنصح بإضافة حد أقصى لعدد الطلبات لتجنب تجاوز حصة الـ API المجانية.</li>
+            </ul>
+        </div>
+
+        <!-- رابط العودة -->
+        <div style="text-align:center; margin-top:2rem;">
+            <a href="Cars.html" class="btn btn-primary" id="btn-back-cars">
+                <span>🔑</span> العودة إلى صفحة السيارات
+            </a>
+        </div>
+
+    </div>
+
+    <!-- تذييل الصفحة -->
+    <footer id="main-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">Drive<span>Easy</span> Car Rental</div>
+            <ul class="footer-nav">
+                <li><a href="home.html">الرئيسية</a></li>
+                <li><a href="AboutUs.html">من نحن</a></li>
+                <li><a href="Cars.html">السيارات</a></li>
+                <li><a href="AIFeature.html">AI Feature</a></li>
+            </ul>
+        </div>
+        <p class="footer-copy">
+            <strong>DriveEasy Car Rental</strong> &copy; 2026 &mdash;
+            مشروع مادة تصميم وتطوير تطبيقات الوب
+        </p>
+    </footer>
+
+    <script type="text/javascript" src="myFunctions.js"></script>
+
+</body>
+</html>
